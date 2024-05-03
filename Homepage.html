@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BookMyDoctor.com</title>
+    <style>
+        *font {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            /*background-color: rgb(203, 127, 35);*/
+            background: url(doc.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            /*background-color: rgb(88, 168, 243);*/
+            background: blur(100px);
+        }
+
+        
+
+
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 8pt;
+            }
+        }
+
+        .navi {
+            height: 100%;
+            width: 80%;
+            float: left;
+            margin-top: 1%;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: none;
+            padding: 0px 15px;
+
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #17759C;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: sans-serif;
+            margin-right: 2%;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #0640b3;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        .Login {
+            height: 100%;
+            width: 10%;
+            float: left;
+        }
+
+
+        .button-71 {
+            background-color: #0078d0;
+            border: 0;
+            border-radius: 56px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            outline: 0;
+            padding: 16px 21px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: all .3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-top: 10px;
+        }
+
+        .button-71:before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 125px;
+            content: "";
+            height: 50%;
+            left: 4%;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            transition: all .3s;
+            width: 92%;
+        }
+
+        .button-71:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .button-71 {
+                padding: 16px 48px;
+            }
+        }
+
+        .left {
+            height: 90%;
+            width: 60%;
+            margin-top: 4.5%;
+            /*background-color: aquamarine;*/
+            float: left;
+            margin-left: -25%;
+
+        }
+
+        .left1 {
+            margin-top: 10%;
+            margin-left: 7%;
+            margin-right: 7%;
+            color: rgb(21, 72, 172);
+            font-family: sans-serif;
+            font-size: 40pt;
+        }
+
+        .left2,
+        .left3 {
+            margin-top: 5%;
+            margin-left: 7%;
+            margin-right: 7%;
+            color: rgb(10, 50, 130);
+            font-family: sans-serif;
+            font-size: 12pt;
+            line-height: 22pt;
+            text-align: justify;
+        }
+
+        .left3 {
+            text-align: center;
+            font-size: 20pt;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .left {
+                margin-top: 10%;
+            }
+        
+            .left1 {
+                font-size: 28pt;
+            }
+        
+
+            .left2 {
+                font-size: 12pt;
+                line-height: 20pt;
+                margin-right: -35%;
+            }
+    
+            .left3 {
+                margin-right: -35%;
+            }
+        }
+
+        .button-43 {
+            background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+            border-radius: .5rem;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            padding: 1rem 1.75rem;
+            text-decoration: none;
+            /*width: 100%;*/
+            border: 0;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-left: 41%;
+            margin-top: -2%;
+        }
+
+        .button-43:hover {
+            background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+        }
+
+        @media (min-width: 768px) {
+            .button-43 {
+                padding: 1rem 2rem;
+
+            }
+        }
+
+        @media (max-width: 600px) {
+            .button-43 {
+                margin-left: 45%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navi">
+                <div class="topnav" id="myTopnav">
+                    <a href="#" class="active">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="Login">
+                <button class="button-71" role="button">Sign In</button>
+            </div>
+        </div>
+        <div class="left">
+            <p class="left1"><b>Welcome to <br> BookMyDoctor.com</b></p>
+            <p class="left2"> "Welcome to our Doctor Appointment Booking App!"<br>
+                We understand the importance of timely healthcare access, which is why we've created a seamless platform
+                to connect patients with trusted healthcare providers. Say goodbye to long waiting times and endless
+                phone calls - with our app, you can easily schedule appointments with a few taps, manage your medical
+                records securely, and receive timely reminders for your upcoming visits. Whether you need a routine
+                check-up, specialist consultation, or urgent care, our app is here to simplify your healthcare journey.
+                Experience convenience, reliability, and peace of mind with our Doctor Appointment Booking App today.
+            </p>
+            <p class="left3">Start for free.</p>
+            <button class="button-43" role="button">Register Now</button>
+        </div>
+        <div class="right"></div>
+
+    </div>
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</html>
